@@ -3,7 +3,7 @@ function submitData(name, email) {
     name: name,
     email: email
   };
-  
+
   let configObj = {
     method: 'POST',
     headers: {
@@ -19,7 +19,7 @@ function submitData(name, email) {
 
     document.body.appendChild(textElement);
   }
-  
+
   return fetch('http://localhost:3000/users', configObj)
     .then(function(response) {
       return response.json();
@@ -31,4 +31,3 @@ function submitData(name, email) {
       appendText(error.message);
     });
 }
-
